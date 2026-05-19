@@ -51,7 +51,7 @@ const skillTabs = [
 export default function Page() {
   return (
     <main className="min-h-screen bg-background text-foreground">
-      <div className="mx-auto max-w-4xl space-y-10 px-6 py-12">
+      <div className="mx-auto max-w-7xl space-y-10 px-6 py-12">
         {/* Header */}
         <div className="space-y-2">
           <div className="flex items-center gap-3">
@@ -144,6 +144,8 @@ export default function Page() {
             ))}
           </Tabs>
         </section>
+
+        <h3>Items</h3>
       </div>
     </main>
   )
