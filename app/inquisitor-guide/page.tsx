@@ -4,6 +4,11 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
 
+import acolyteSkillTree from "@/assets/images/acolyte_skill_tree.png"
+import championSkillTree from "@/assets/images/champion_skill_tree.png"
+import suraSkillTree from "@/assets/images/sura_skill_tree.png"
+import inquisitorSkillTree from "@/assets/images/inquisitor_skill_tree.png"
+
 const statBuilds = [
   {
     value: "jeon",
@@ -32,35 +37,15 @@ const statBuilds = [
 ]
 
 const skillTabs = [
-  {
-    value: "acolyte",
-    label: "Acolyte",
-    src: "/images/acolyte_skill_tree.png",
-    width: 1316,
-    height: 337,
-  },
+  { value: "acolyte", label: "Acolyte", img: acolyteSkillTree },
   {
     value: "champion",
     label: "Champion",
-    src: "/images/champion_skill_tree.png",
-    width: 1137,
-    height: 422,
+    img: championSkillTree,
     note: "อีก 2 point ที่เหลือ กลับไปอัพ Increase Agility ให้เต็ม 10",
   },
-  {
-    value: "sura",
-    label: "Sura",
-    src: "/images/sura_skill_tree.png",
-    width: 1059,
-    height: 401,
-  },
-  {
-    value: "inquisitor",
-    label: "Inquisitor",
-    src: "/images/inquisitor_skill_tree.png",
-    width: 1059,
-    height: 401,
-  },
+  { value: "sura", label: "Sura", img: suraSkillTree },
+  { value: "inquisitor", label: "Inquisitor", img: inquisitorSkillTree },
 ]
 
 export default function Page() {
@@ -142,16 +127,12 @@ export default function Page() {
               >
                 <Card>
                   <CardContent className="pt-6">
-                    <div style={{ maxWidth: t.width }}>
-                      <Image
-                        src={t.src}
-                        alt={`${t.label} Skill Tree`}
-                        width={t.width}
-                        height={t.height}
-                        quality={100}
-                        style={{ width: "100%", height: "auto" }}
-                      />
-                    </div>
+                    <Image
+                      src={t.img}
+                      alt={`${t.label} Skill Tree`}
+                      quality={100}
+                      style={{ width: "100%", height: "auto" }}
+                    />
                   </CardContent>
                 </Card>
                 {t.note && (
