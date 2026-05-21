@@ -29,7 +29,7 @@ const statBuilds = [
       {
         level: "LV.200",
         values:
-          "STR 125  ·  AGI 101  ·  VIT 125  ·  INT 50  ·  DEX 110  ·  LUK 1",
+          "STR 120  ·  AGI 110  ·  VIT 125  ·  INT 40  ·  DEX 110  ·  LUK 23",
       },
       { level: "LV.250", values: "POW 100  ·  CON 97" },
     ],
