@@ -37,15 +37,63 @@ const statBuilds = [
 ]
 
 const skillTabs = [
-  { value: "acolyte", label: "Acolyte", img: acolyteSkillTree },
+  {
+    value: "acolyte",
+    label: "Acolyte",
+    img: acolyteSkillTree,
+    steps: [
+      { 1: "Divine Protection - 10" },
+      { 2: "Demon Bane - 10" },
+      { 3: "Blessing - 10" },
+      { 4: "Increase AGI - 10" },
+      { 5: "Warp Portal - 3" },
+    ],
+  },
   {
     value: "champion",
     label: "Champion",
     img: championSkillTree,
-    note: "อีก 2 point ที่เหลือ กลับไปอัพ Increase Agility ให้เต็ม 10",
+    steps: [
+      { 1: "Snap - 1" },
+      { 2: "Iron Hand - 10" },
+      { 3: "Zen - 1" },
+      { 4: "Vigor Recovery - 5" },
+      { 5: "Pneuma - 1 (Acolyte Class)" },
+      { 6: "Angelus - 9 (Acolyte Class)" },
+    ],
   },
-  { value: "sura", label: "Sura", img: suraSkillTree },
-  { value: "inquisitor", label: "Inquisitor", img: inquisitorSkillTree },
+  {
+    value: "sura",
+    label: "Sura",
+    img: suraSkillTree,
+    steps: [
+      { 1: "Rising Dragon Lv 10" },
+      { 2: "Power Absorb Lv 1" },
+      { 3: "Flash Combo Lv 5" },
+      { 4: "Gentle Touch - Alive Lv 5" },
+      { 5: "Tiger Cannon Lv 10" },
+      { 6: "Fallen Empire Lv 10" },
+      { 7: "Dragon Combo Lv 10" },
+      { 8: "Gentle Touch - Save Lv 5" },
+    ],
+    note: "Point ที่เหลือกลับไปอัพ Class 1 & 2 ได้เลย",
+  },
+  {
+    value: "inquisitor",
+    label: "Inquisitor",
+    img: inquisitorSkillTree,
+    steps: [
+      { 1: "Explosion Blaster Lv 1" },
+      { 2: "Powerful Faith Lv 5" },
+      { 3: "First Faith Power Lv 5" },
+      { 4: "2nd chapter - Arbiter(Judge) Lv 5" },
+      { 5: "Third Exorcism Flame Lv 5" },
+      { 6: "Third Flame Bomb Lv 5" },
+      { 7: "Second Judgement Lv 5" },
+      { 8: "Will of Faith Lv 10" },
+      { 9: "First Brand Lv 5" },
+    ],
+  },
 ]
 
 export default function Page() {
