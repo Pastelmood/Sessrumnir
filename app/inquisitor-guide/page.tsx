@@ -42,11 +42,11 @@ const skillTabs = [
     label: "Acolyte",
     img: acolyteSkillTree,
     steps: [
-      { 1: "Divine Protection - 10" },
-      { 2: "Demon Bane - 10" },
-      { 3: "Blessing - 10" },
-      { 4: "Increase AGI - 10" },
-      { 5: "Warp Portal - 3" },
+      { 1: "Divine Protection Lv 10" },
+      { 2: "Demon Bane Lv 10" },
+      { 3: "Blessing Lv 10" },
+      { 4: "Increase AGI Lv 10" },
+      { 5: "Warp Portal Lv 3" },
     ],
   },
   {
@@ -54,12 +54,12 @@ const skillTabs = [
     label: "Champion",
     img: championSkillTree,
     steps: [
-      { 1: "Snap - 1" },
-      { 2: "Iron Hand - 10" },
-      { 3: "Zen - 1" },
-      { 4: "Vigor Recovery - 5" },
-      { 5: "Pneuma - 1 (Acolyte Class)" },
-      { 6: "Angelus - 9 (Acolyte Class)" },
+      { 1: "Snap Lv 1" },
+      { 2: "Iron Hand Lv 10" },
+      { 3: "Zen Lv 1" },
+      { 4: "Vigor Recovery Lv 5" },
+      { 5: "Pneuma Lv 1 (Acolyte Class)" },
+      { 6: "Angelus Lv 9 (Acolyte Class)" },
     ],
   },
   {
@@ -171,7 +171,7 @@ export default function Page() {
               <TabsContent
                 key={t.value}
                 value={t.value}
-                className="mt-4 space-y-3"
+                className="mt-4 space-y-4"
               >
                 <Card>
                   <CardContent className="pt-6">
@@ -183,6 +183,29 @@ export default function Page() {
                     />
                   </CardContent>
                 </Card>
+
+                {/* Skill Steps */}
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-sm font-semibold tracking-widest text-muted-foreground uppercase">
+                      ลำดับการอัพสกิล
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-2">
+                    {t.steps.map((step, i) => {
+                      const label = Object.values(step)[0]
+                      return (
+                        <div key={i} className="flex items-center gap-3">
+                          <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-muted font-mono text-xs font-medium text-muted-foreground">
+                            {i + 1}
+                          </span>
+                          <span className="text-sm">{label}</span>
+                        </div>
+                      )
+                    })}
+                  </CardContent>
+                </Card>
+
                 {t.note && (
                   <p className="px-1 text-sm text-muted-foreground">
                     💡 {t.note}
